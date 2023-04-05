@@ -1,0 +1,20 @@
+{
+    "name": "angel/curso-php-sql-12-consultas-pdo",
+    "description": "conexion a base de datos",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            
+            "App\\": "app/",
+            "Database\\": "database/",
+            "Router\\": "router/"
+        }
+    },
+    "authors": [
+        {
+            "name": "angelperaza"
+        }
+    ],
+    "require": {}
+}
