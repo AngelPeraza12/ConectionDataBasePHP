@@ -9,7 +9,7 @@ class RouterHandler {
     protected $data;
 
     public function set_method($method) {
-        $this->data = $method;
+        $this->method = $method;
     }
 
     public function set_data($data) {
@@ -23,7 +23,7 @@ class RouterHandler {
         switch($this->method) {
 
             case "get":
-                if ($id && "create")
+                if ($id && $id == "create")
                     $resource->create();
                 else if($id)
                     $resource->show($id);

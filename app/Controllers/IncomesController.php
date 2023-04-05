@@ -20,12 +20,12 @@ class IncomesController {
      */
     public function index() {
 
-       $stmt = $this->connection->prepare("SELECT * FROM incomes");
-       $stmt->execute();
+        $stmt = $this->connection->prepare("SELECT * FROM incomes");
+        $stmt->execute();
 
-       $results = $stmt->fetchAll();
+        $results = $stmt->fetchAll();
 
-       require("..resources/views/incomes/index.php");
+        require("../resources/views/incomes/index.php");
 
        //bindcolumn me permite asociar una columna y ponerla como variable es como un alias despues de la coma osea "amount" ahora esta en la variable $amount que no esta definida
        //por eso el linter de vsc marca error pero bind column ya la definio
@@ -47,7 +47,9 @@ class IncomesController {
     /**
      * Muestra un formulario para crear un nuevo recurso
      */
-    public function create() {}
+    public function create() {
+        require("../resources/views/incomes/create.php");
+    }
 
     /**
      * Guarda un nuevo recurso en la base de datos
